@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
+import { z } from 'zod';
 import { auth, jsonResponse, jsonValidator } from '@talon/core';
 import type { AppEnv, UsersService } from '@talon/core';
-import { z } from 'zod';
 
 export const usersRouter = new Hono<AppEnv>()
   .basePath('/users')
@@ -10,13 +10,7 @@ export const usersRouter = new Hono<AppEnv>()
    * Public endpoints
    */
   .get('/', async (c) => {
-    return jsonResponse(c, [
-      { id: 1, name: 'Alice' },
-      { id: 2, name: 'Bob' },
-      { id: 3, name: 'Charlie' },
-    ]);
-
-    // return jsonResponse(c, await c.var.services.get<UsersService>('UsersService').getUsers());
+    return jsonResponse(c, await c.var.services.get<UsersService>('UsersService').getUsers());
   })
 
   .use(auth)
