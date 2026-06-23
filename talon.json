@@ -1,0 +1,21 @@
+{
+  "paths": {
+    "migrations": "database/migrations",
+    "seeds": "database/seeds"
+  },
+  "database": {
+    "user": "${env.DATABASE_USER}",
+    "password": "${env.DATABASE_PASSWORD}",
+    "host": "${env.DATABASE_HOST}",
+    "database": "${env.DATABASE_NAME}",
+    "port": "${env.DATABASE_PORT}",
+    "ssl": "false",
+    "schema": "public",
+    "pool": {
+      "max": "${env.DATABASE_POOL_SIZE}",
+      "maxLifetime": "${env.DATABASE_MAX_LIFETIME}",
+      "idleTimeout": "${env.DATABASE_IDLE_TIMEOUT}",
+      "connectionTimeout": "${env.DATABASE_CONNECTION_TIMEOUT}"
+    }
+  }
+}

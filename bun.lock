@@ -1,0 +1,39 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "boilerplate",
+      "dependencies": {
+        "@talon/core": "github:jmlaya/talon-core",
+        "@talon/cli": "github:jmlaya/talon-cli",
+        "hono": "4.10.4",
+        "zod": "4.1.12",
+      },
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+    },
+  },
+  "packages": {
+    "@hono/zod-validator": ["@hono/zod-validator@0.7.4", "", { "peerDependencies": { "hono": ">=3.9.0", "zod": "^3.25.0 || ^4.0.0" } }, "sha512-biKGn3BRJVaftZlIPMyK+HCe/UHAjJ6sH0UyXe3+v0OcgVr9xfImDROTJFLtn9e3XEEAHGZIM9U6evu85abm8Q=="],
+
+    "@talon/cli": ["@talon/cli@github:jmlaya/talon-cli#dd3a8ed", { "dependencies": { "@talon/core": "github:jmlaya/talon-core" }, "bin": { "talon": "./src/cli.ts" } }, "jmlaya-talon-cli-dd3a8ed", "sha512-mw/7YJNSeN3ynOsYsr+PQcBungoa4uJhAEtJqE87Nqa0gT4j7xeydj4idFMRpwRoZ3sU+o2va7GdyI1a3J27lQ=="],
+
+    "@talon/core": ["@talon/core@github:jmlaya/talon-core#b1bac55", { "dependencies": { "@hono/zod-validator": "0.7.4", "hono": "4.10.4", "zod": "4.1.12" } }, "jmlaya-talon-core-b1bac55", "sha512-JuKN5N8joeqGG2AhafxeTB6sm2cWbBjp+AYLsXME1rr2RX65Yfp4SPMgITE3NBx2DzZO+YMv8qCD/oJqJPMDcA=="],
+
+    "@types/bun": ["@types/bun@1.3.14", "", { "dependencies": { "bun-types": "1.3.14" } }, "sha512-h1hFqFVcvAvD9j9K7ZW7vd82aSA+rTdznZa+5bwvCwqSB1jmmfLcbIWhOLx1/+boy/xmjgCs/OMUL8hRJSmnPw=="],
+
+    "@types/node": ["@types/node@26.0.0", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-vf2YFi1iY9lHGwNJMs01biZFbKJkrZR1T6/MlzjhJLPdntOHLhTrDSnSVcdtvjihi4VQNlrFRIxLsDBlQpAipA=="],
+
+    "bun-types": ["bun-types@1.3.14", "", { "dependencies": { "@types/node": "*" } }, "sha512-4N0ig0fEomHt5R0KCFWjovxow98rIoRwKolrYdCcknNwMekCXRnWEUvgu5soYV8QXtVsrUD8B95MBOZGPvr6KQ=="],
+
+    "hono": ["hono@4.10.4", "", {}, "sha512-YG/fo7zlU3KwrBL5vDpWKisLYiM+nVstBQqfr7gCPbSYURnNEP9BDxEMz8KfsDR9JX0lJWDRNc6nXX31v7ZEyg=="],
+
+    "undici-types": ["undici-types@8.3.0", "", {}, "sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ=="],
+
+    "zod": ["zod@4.1.12", "", {}, "sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ=="],
+
+    "@talon/cli/@talon/core": ["@talon/core@github:jmlaya/talon-core#b1bac55", { "dependencies": { "@hono/zod-validator": "0.7.4", "hono": "4.10.4", "zod": "4.1.12" } }, "jmlaya-talon-core-b1bac55", "sha512-JuKN5N8joeqGG2AhafxeTB6sm2cWbBjp+AYLsXME1rr2RX65Yfp4SPMgITE3NBx2DzZO+YMv8qCD/oJqJPMDcA=="],
+  }
+}
